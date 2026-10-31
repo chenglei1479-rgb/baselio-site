@@ -237,39 +237,241 @@ const dictionaries = {
   }
 }
 
+const additions = {
+  "zh": {
+    "hero.line1": "从临床问题，",
+    "hero.line2": "走向有据的研究。",
+    "hero.lede": "面向医生与医学研究者的 AI 科研工作台。将文献、研究方案、分析与写作组织在同一项目中；核查证据、确认方法与审核结论，始终由你主导。",
+    "hero.ctaSecondary": "了解研究流程",
+    "hero.status": "邀请制 Beta · 具体可用能力以获邀版本为准",
+    "demo.eyebrow": "产品演示",
+    "demo.title": "看清过程，再判断价值",
+    "demo.body": "当前尚未提供真实产品录屏与可复核执行记录，当前页面不提供在线科研执行。下面是使用场景说明，不是产品截图或已执行结果。申请 Beta 时可说明希望了解的流程。",
+    "scenes.title": "从门诊后的一个问题开始",
+    "scenes.note": "场景说明 · 非执行结果",
+    "scene.0.title": "准备研究",
+    "scene.0.body": "把临床疑问梳理为人群、干预/暴露、对照与结局。先核对检索范围和文献来源，再讨论研究方案；伦理与注册信息由研究者补充确认。",
+    "scene.1.title": "核查统计分析",
+    "scene.1.body": "在机构允许的前提下使用去标识化数据。确认变量与统计计划，检查运行环境、代码及实际输出；不能执行时不把示例当作结果。",
+    "scene.2.title": "推进论文草稿",
+    "scene.2.body": "以核实过的文献和实际分析结果为基础组织草稿。检查引用与数字，保留缺失信息；作者负责最终科学判断与投稿审核。",
+    "difference.title": "对话之外，更关注研究的衔接",
+    "difference.body": "Baselio 的设计重点是把问题、来源、方法与产出放在同一项目语境中，并保留研究者确认环节。是否适合你的任务，需要用实际版本与真实记录判断；AI 文本不能替代证据、执行或审稿。",
+    "audience.title": "为你的研究方式，找到合适的入口",
+    "audience.0.title": "医生 / 医学研究者",
+    "audience.0.body": "申请个人 Beta，说明当前科研阶段与最希望验证的任务。",
+    "audience.1.title": "医院 / 研究机构",
+    "audience.1.body": "咨询研究团队试点，先讨论数据边界与院内评估；不承诺已提供私有部署。",
+    "audience.2.title": "药企 / CRO",
+    "audience.2.body": "提交合作需求，明确研究目标与合规约束；机构协作能力需单独确认。",
+    "audience.link": "申请 / 咨询 →",
+    "privacy.title": "使用前，先确认数据边界",
+    "privacy.body": "本机文件 → 任务所需内容 → 可能调用外部模型或连接服务。具体发送内容与目的地取决于版本和配置；隐私扫描不能保证识别所有敏感信息。不要提交患者资料、未授权数据或密钥。机构使用前应核查供应方、保存期限、删除方式与适用要求，不能将本页视为合规认证。",
+    "pricing.title": "Beta 与费用",
+    "pricing.body": "当前采用邀请制。可用范围、模型费用、Credits 与机构试点条款需在邀请或咨询时确认；本页不承诺永久免费、固定额度或特定交付时间。",
+    "skip": "跳至正文",
+    "a11y.nav": "主导航",
+    "a11y.language": "选择语言",
+    "a11y.pills": "产品特性",
+    "a11y.footer": "页脚导航",
+    "beta.title": "申请 Baselio Beta",
+    "beta.intro": "告诉我们你的研究需求。此表单仅在当前页面生成邮件草稿，不会自动提交或登记申请。请在邮件应用中核对并发送。",
+    "beta.role": "你的身份",
+    "beta.choose": "请选择",
+    "beta.org": "机构名称（可选）",
+    "beta.task": "最希望了解的任务",
+    "beta.task0": "文献检索与研究方案",
+    "beta.task1": "统计分析与数据处理",
+    "beta.task2": "论文草稿与引用核查",
+    "beta.notice": "隐私提示：不填写患者资料、研究原始数据或其他保密信息。填写内容不会由本站自动保存；发送邮件后按邮件服务及收件方流程处理。申请状态与后续条款请通过邮件确认。",
+    "beta.consent": "我理解此操作只生成草稿，并确认未填写敏感信息。",
+    "beta.prepare": "生成邮件草稿",
+    "beta.ready": "草稿已生成，尚未发送。可打开邮件应用发送；无法打开时请复制下方内容，发至 hello@baselio.dev。",
+    "beta.open": "打开邮件应用",
+    "beta.draft": "邮件草稿内容",
+    "beta.fallback": "也可直接邮件联系 hello@baselio.dev",
+    "beta.back": "返回首页",
+    "beta.changed": "申请内容已更改，请重新生成草稿。",
+    "beta.subject": "Baselio Beta 申请 / 合作咨询"
+  },
+  "en": {
+    "hero.line1": "From a clinical question,",
+    "hero.line2": "to evidence-led research.",
+    "hero.lede": "An AI research workspace for clinicians and medical researchers. Bring literature, protocols, analysis and writing into one project. You verify the evidence, confirm the methods and review the conclusions.",
+    "hero.ctaSecondary": "Explore the workflow",
+    "hero.status": "Invitation-only beta · Availability depends on your invited version",
+    "demo.eyebrow": "Product demonstration",
+    "demo.title": "See the process. Judge the evidence.",
+    "demo.body": "A real product recording and verifiable run records are not yet available on this page. This page does not run research tasks. The scenarios below explain intended use; they are not product screenshots or executed results. Tell us which workflow you would like to explore when requesting beta access.",
+    "scenes.title": "Start with a question after clinic",
+    "scenes.note": "Illustrative scenarios · Not executed results",
+    "scene.0.title": "Plan a study",
+    "scene.0.body": "Frame a clinical question around population, intervention/exposure, comparator and outcomes. Check the search scope and sources before discussing a protocol. Researchers confirm ethics and registration details.",
+    "scene.1.title": "Review an analysis",
+    "scene.1.body": "Use de-identified data only where your institution permits. Confirm variables and the analysis plan, then inspect the environment, code and actual output. Examples must never stand in for results when execution is unavailable.",
+    "scene.2.title": "Develop a manuscript draft",
+    "scene.2.body": "Organise a draft around checked references and actual analysis results. Review citations and numbers and keep missing information visible. Authors retain scientific judgement and final submission review.",
+    "difference.title": "Beyond a conversation, focus on research continuity",
+    "difference.body": "Baselio is designed around a shared project context for questions, sources, methods and outputs, with researcher review along the way. Assess suitability using the actual version and run records. AI text cannot replace evidence, execution or peer review.",
+    "audience.title": "Find the right starting point",
+    "audience.0.title": "Clinicians / researchers",
+    "audience.0.body": "Request individual beta access and describe the task you want to evaluate.",
+    "audience.1.title": "Hospitals / institutions",
+    "audience.1.body": "Discuss a team pilot, data boundaries and institutional evaluation. Private deployment is not promised.",
+    "audience.2.title": "Pharma / CRO",
+    "audience.2.body": "Share collaboration needs, research goals and governance constraints. Institutional capabilities require separate confirmation.",
+    "audience.link": "Apply / enquire →",
+    "privacy.title": "Confirm data boundaries before use",
+    "privacy.body": "Local files → task-specific content → possible external model or connected service calls. What is sent and where depends on the version and configuration. Privacy screening cannot identify all sensitive information. Do not submit patient records, unauthorised data or keys. Institutions should review providers, retention, deletion and applicable requirements; this page is not a compliance certification.",
+    "pricing.title": "Beta and costs",
+    "pricing.body": "Access is by invitation. Availability, model costs, credits and institutional pilot terms must be confirmed with your invitation or enquiry. This page promises no permanent free access, fixed allowance or delivery date.",
+    "skip": "Skip to content",
+    "a11y.nav": "Main navigation",
+    "a11y.language": "Choose language",
+    "a11y.pills": "Product principles",
+    "a11y.footer": "Footer navigation",
+    "beta.title": "Request Baselio beta",
+    "beta.intro": "Tell us about your research needs. This form only prepares an email draft on this page; it does not submit or register an application. Review and send it in your email app.",
+    "beta.role": "Your role",
+    "beta.choose": "Please select",
+    "beta.org": "Institution (optional)",
+    "beta.task": "Workflow of interest",
+    "beta.task0": "Evidence and study planning",
+    "beta.task1": "Statistical analysis",
+    "beta.task2": "Drafting and citation review",
+    "beta.notice": "Privacy: do not include patient information, raw research data or confidential material. This site does not automatically save your entries. Sent email is handled by your email provider and the recipient. Confirm application status and terms by email.",
+    "beta.consent": "I understand this prepares a draft only and confirm I have included no sensitive information.",
+    "beta.prepare": "Prepare email draft",
+    "beta.ready": "Draft prepared, not sent. Open your email app to send it, or copy the text below and email hello@baselio.dev.",
+    "beta.open": "Open email app",
+    "beta.draft": "Email draft",
+    "beta.fallback": "You can also email hello@baselio.dev directly",
+    "beta.back": "Back to home",
+    "beta.changed": "Your entries changed. Prepare a new draft.",
+    "beta.subject": "Baselio beta request / enquiry"
+  },
+  "ja": {
+    "hero.line1": "臨床の問いから、",
+    "hero.line2": "根拠のある研究へ。",
+    "hero.lede": "医師・医学研究者のための AI 研究ワークスペース。文献、研究計画、解析、執筆を一つのプロジェクトに整理し、根拠の確認、手法の選択、結論の検討は研究者が担います。",
+    "hero.ctaSecondary": "研究の流れを見る",
+    "hero.status": "招待制ベータ · 利用できる機能は提供バージョンにより異なります",
+    "demo.eyebrow": "製品デモ",
+    "demo.title": "過程を見て、価値を判断する",
+    "demo.body": "実際の製品録画と検証可能な実行記録は、このページではまだ公開していません。このページで研究タスクは実行できません。以下は利用場面の説明であり、製品画面や実行結果ではありません。申し込み時に確認したい流れをお知らせください。",
+    "scenes.title": "診療後に浮かんだ問いから",
+    "scenes.note": "利用場面の説明 · 実行結果ではありません",
+    "scene.0.title": "研究計画を準備する",
+    "scene.0.body": "臨床の疑問を対象集団、介入・曝露、比較、アウトカムに整理。検索範囲と出典を確認してから研究計画を検討し、倫理審査・登録事項は研究者が確認します。",
+    "scene.1.title": "統計解析を確認する",
+    "scene.1.body": "所属機関が認めた範囲で匿名化等を施したデータを使用。変数と解析計画を確認し、実行環境、コード、実際の出力を検討します。実行できない場合、例示を結果として扱いません。",
+    "scene.2.title": "論文草稿を進める",
+    "scene.2.body": "確認済み文献と実際の解析結果から草稿を構成。引用・数値を照合し、不足情報を明示します。科学的判断と投稿前の最終確認は著者が担います。",
+    "difference.title": "対話の先に、研究のつながりを",
+    "difference.body": "問い・出典・手法・成果を同じプロジェクトの文脈で扱い、研究者の確認を挟むことを重視しています。適合性は実際のバージョンと記録でご判断ください。AI の文章は根拠・実行・査読の代わりにはなりません。",
+    "audience.title": "研究の進め方に合った窓口を",
+    "audience.0.title": "医師・医学研究者",
+    "audience.0.body": "個人ベータを申し込み、研究段階と確認したい作業をお知らせください。",
+    "audience.1.title": "病院・研究機関",
+    "audience.1.body": "チームでの試行、データの取扱い、院内評価について相談。専用環境の提供を約束するものではありません。",
+    "audience.2.title": "製薬企業・CRO",
+    "audience.2.body": "研究目標と規程上の制約を添えてご相談ください。組織向け機能の提供可否は個別に確認します。",
+    "audience.link": "申し込み・相談 →",
+    "privacy.title": "利用前にデータの取扱いを確認",
+    "privacy.body": "端末内ファイル → タスクに必要な内容 → 外部モデル・連携サービスを利用する可能性があります。送信内容・宛先はバージョンと設定に依存し、スキャンで全ての機微情報を検出できるとは限りません。患者情報、未承認データ、鍵情報は送信しないでください。提供元、保存期間、削除方法、適用要件を所属機関で確認してください。本ページは適合認証ではありません。",
+    "pricing.title": "ベータと費用",
+    "pricing.body": "招待制です。利用範囲、モデル利用料、クレジット、組織向け試行の条件は招待・相談時に確認してください。永久無料、固定枠、提供時期はお約束していません。",
+    "skip": "本文へ移動",
+    "a11y.nav": "メインナビゲーション",
+    "a11y.language": "言語を選択",
+    "a11y.pills": "製品の基本方針",
+    "a11y.footer": "フッターナビゲーション",
+    "beta.title": "Baselio ベータ版のお申し込み",
+    "beta.intro": "研究で取り組みたいことをお知らせください。このフォームはページ内でメール下書きを作成するだけで、申し込みの送信・登録は行いません。メールアプリで確認して送信してください。",
+    "beta.role": "ご所属・立場",
+    "beta.choose": "選択してください",
+    "beta.org": "所属機関名（任意）",
+    "beta.task": "確認したい作業",
+    "beta.task0": "文献検索・研究計画",
+    "beta.task1": "統計解析・データ処理",
+    "beta.task2": "論文草稿・引用確認",
+    "beta.notice": "患者情報、研究の生データ、機密情報は入力しないでください。本サイトは入力内容を自動保存しません。メール送信後はメールサービスと受信者の手順で取り扱われます。受付状況・条件はメールで確認してください。",
+    "beta.consent": "下書きの作成のみであることを理解し、機微情報を含めていないことを確認しました。",
+    "beta.prepare": "メール下書きを作成",
+    "beta.ready": "下書きを作成しました。まだ送信していません。メールアプリで送信するか、下の内容をコピーして hello@baselio.dev へお送りください。",
+    "beta.open": "メールアプリを開く",
+    "beta.draft": "メール下書き",
+    "beta.fallback": "hello@baselio.dev への直接のお問い合わせも可能です",
+    "beta.back": "ホームへ戻る",
+    "beta.changed": "入力内容が変わりました。下書きを作り直してください。",
+    "beta.subject": "Baselio ベータ申し込み・相談"
+  }
+}
+for (const language of Object.keys(additions)) Object.assign(dictionaries[language], additions[language])
+
 const storageKey = 'baselio-language'
 const select = document.getElementById('language')
-
-const titles = {
-  zh: 'Baselio — 让研究，步步有据。',
-  en: 'Baselio — Research, grounded in evidence.',
-  ja: 'Baselio — 研究の一歩に、確かな根拠を。'
+let currentLanguage = 'zh'
+const form = document.getElementById('beta-form')
+const clearDraft = () => {
+  const panel = document.getElementById('draft-panel')
+  if (!panel || panel.hidden) return
+  panel.hidden = true
+  document.getElementById('draft').value = ''
+  document.getElementById('open-mail').removeAttribute('href')
+  document.getElementById('draft-status').textContent = dictionaries[currentLanguage]['beta.changed']
 }
-
 const applyLanguage = (language) => {
-  const dictionary = dictionaries[language] ?? dictionaries.zh
-  document.documentElement.lang = language
-  document.title = titles[language] ?? titles.zh
+  currentLanguage = Object.hasOwn(dictionaries, language) ? language : 'zh'
+  const dictionary = dictionaries[currentLanguage]
+  document.documentElement.lang = currentLanguage
+  document.title = 'Baselio — ' + dictionary[form ? 'beta.title' : 'hero.line1'] + (form ? '' : (currentLanguage === 'en' ? ' ' : '') + dictionary['hero.line2'])
   for (const node of document.querySelectorAll('[data-i18n]')) {
-    const key = node.getAttribute('data-i18n')
-    const value = dictionary[key]
+    const value = dictionary[node.dataset.i18n]
     if (typeof value === 'string') node.textContent = value
   }
-  if (select) select.value = language
+  for (const node of document.querySelectorAll('[data-i18n-aria]')) {
+    node.setAttribute('aria-label', dictionary[node.dataset.i18nAria])
+  }
+  document.querySelector('meta[name="description"]').content = dictionary[form ? 'beta.intro' : 'hero.lede']
+  const url = new URL(location.href)
+  url.searchParams.set('lang', currentLanguage)
+  history.replaceState(null, '', url)
+  for (const link of document.querySelectorAll('a[href]')) {
+    const href = link.getAttribute('href')
+    if (!/^(index|beta)\.html(?:[?#]|$)/.test(href)) continue
+    const target = new URL(href, location.href)
+    target.searchParams.set('lang', currentLanguage)
+    link.setAttribute('href', target.pathname.split('/').pop() + target.search + target.hash)
+  }
+  if (select) select.value = currentLanguage
+  clearDraft()
 }
-
 const requested = new URLSearchParams(location.search).get('lang')
 let saved
-try {
-  saved = localStorage.getItem(storageKey)
-} catch {}
-
-applyLanguage(dictionaries[requested] ? requested : dictionaries[saved] ? saved : 'zh')
-
+try { saved = localStorage.getItem(storageKey) } catch {}
+applyLanguage(Object.hasOwn(dictionaries, requested) ? requested : Object.hasOwn(dictionaries, saved) ? saved : 'zh')
 select?.addEventListener('change', (event) => {
-  const language = event.target.value
-  try {
-    localStorage.setItem(storageKey, language)
-  } catch {}
-  applyLanguage(language)
+  applyLanguage(event.target.value)
+  try { localStorage.setItem(storageKey, currentLanguage) } catch {}
 })
+if (form) {
+  form.hidden = false
+  const role = new URLSearchParams(location.search).get('role')
+  if (['0', '1', '2'].includes(role)) form.elements.role.value = role
+  form.addEventListener('input', clearDraft)
+  form.addEventListener('change', clearDraft)
+  form.addEventListener('submit', (event) => {
+    event.preventDefault()
+    if (!form.reportValidity()) return
+    const d = dictionaries[currentLanguage]
+    const body = [d['beta.subject'], '', d['beta.role'] + ': ' + form.elements.role.selectedOptions[0].textContent,
+      d['beta.org'] + ': ' + form.elements.institution.value.trim(),
+      d['beta.task'] + ': ' + form.elements.task.selectedOptions[0].textContent,
+      'Language: ' + currentLanguage, 'Source: baselio-site / beta'].join('\n')
+    document.getElementById('draft').value = body
+    document.getElementById('open-mail').href = 'mailto:hello@baselio.dev?subject=' + encodeURIComponent(d['beta.subject']) + '&body=' + encodeURIComponent(body)
+    document.getElementById('draft-panel').hidden = false
+    document.getElementById('draft-status').textContent = d['beta.ready']
+  })
+}

@@ -9,74 +9,83 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a href="#main" class="skip-link" data-i18n="skip">跳至正文</a>
     <header class="site-header" id="top">
       <div class="wrap header-inner">
         <a class="brand" href="#top">
           <img src="logo.png" alt="" width="32" height="32" />
           <span class="brand-name">Baselio</span>
         </a>
-        <nav class="nav" aria-label="主导航">
+        <nav class="nav" aria-label="主导航" data-i18n-aria="a11y.nav">
           <a href="#capabilities" data-i18n="nav.capabilities">产品能力</a>
           <a href="#workflow" data-i18n="nav.workflow">研究流程</a>
           <a href="#trust" data-i18n="nav.trust">数据与信任</a>
           <a href="#faq" data-i18n="nav.faq">常见问题</a>
         </nav>
         <div class="header-actions">
-          <select id="language" class="lang" aria-label="选择语言">
+          <select id="language" class="lang" aria-label="选择语言" data-i18n-aria="a11y.language">
             <option value="zh">中文</option>
             <option value="en">English</option>
             <option value="ja">日本語</option>
           </select>
-          <a class="btn btn-primary" href="#start" data-i18n="nav.cta">申请 beta</a>
+          <a class="btn btn-primary" href="beta.html" data-i18n="nav.cta">申请 beta</a>
         </div>
       </div>
     </header>
 
-    <main>
+    <main id="main" tabindex="-1">
       <section class="hero">
         <div class="wrap">
           <p class="eyebrow" data-i18n="hero.eyebrow">医学科研工作台</p>
           <h1>
-            <span data-i18n="hero.line1">让研究，</span><br />
-            <em data-i18n="hero.line2">步步有据。</em>
+            <span data-i18n="hero.line1">从临床问题，</span>
+<br />
+            <em data-i18n="hero.line2">走向有据的研究。</em>
           </h1>
-          <p class="lede" data-i18n="hero.lede">
-            从一个值得探索的问题，到一份可核查的研究成果。Baselio
-            把文献、方案、分析与写作连在同一个项目里，关键决策始终由你确认。
-          </p>
+          <p class="lede" data-i18n="hero.lede">面向医生与医学研究者的 AI 科研工作台。将文献、研究方案、分析与写作组织在同一项目中；核查证据、确认方法与审核结论，始终由你主导。</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#start" data-i18n="hero.ctaPrimary">申请 beta</a>
-            <a class="btn btn-ghost" href="#capabilities" data-i18n="hero.ctaSecondary">看看能做什么</a>
+            <a class="btn btn-primary" href="beta.html" data-i18n="hero.ctaPrimary">申请 beta</a>
+            <a class="btn btn-ghost" href="#demo" data-i18n="hero.ctaSecondary">了解研究流程</a>
           </div>
-          <ul class="pills" aria-label="产品特性">
+          <p class="fineprint" data-i18n="hero.status">邀请制 Beta · 具体可用能力以获邀版本为准</p>
+<ul class="pills" aria-label="产品特性" data-i18n-aria="a11y.pills">
             <li data-i18n="hero.pill1">桌面科研智能体</li>
             <li data-i18n="hero.pill2">研究者主导</li>
             <li data-i18n="hero.pill3">来源可追溯</li>
           </ul>
         </div>
-        <div class="wrap hero-visual" aria-hidden="true">
-          <div class="screen">
-            <div class="screen-bar"><span></span><span></span><span></span></div>
-            <div class="screen-body">
-              <div class="screen-side">
-                <div class="sk sk-title"></div>
-                <div class="sk"></div>
-                <div class="sk"></div>
-                <div class="sk sk-short"></div>
-              </div>
-              <div class="screen-main">
-                <div class="sk sk-line"></div>
-                <div class="sk sk-line"></div>
-                <div class="sk sk-line sk-short"></div>
-                <div class="chips">
-                  <span>文献</span><span>方案</span><span>数据</span><span>论文</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
+<section class="section demo-section" id="demo">
+<div class="wrap">
+<p class="eyebrow" data-i18n="demo.eyebrow">产品演示</p>
+<h2 data-i18n="demo.title">看清过程，再判断价值</h2>
+<p class="demo-note" data-i18n="demo.body">当前尚未提供真实产品录屏与可复核执行记录，当前页面不提供在线科研执行。下面是使用场景说明，不是产品截图或已执行结果。申请 Beta 时可说明希望了解的流程。</p>
+<h3 data-i18n="scenes.title">从门诊后的一个问题开始</h3>
+<p class="fineprint" data-i18n="scenes.note">场景说明 · 非执行结果</p>
+<div class="grid grid-3">
+<article class="card">
+<span class="card-num">01</span>
+<h3 data-i18n="scene.0.title">准备研究</h3>
+<p data-i18n="scene.0.body">把临床疑问梳理为人群、干预/暴露、对照与结局。先核对检索范围和文献来源，再讨论研究方案；伦理与注册信息由研究者补充确认。</p>
+</article>
+<article class="card">
+<span class="card-num">02</span>
+<h3 data-i18n="scene.1.title">核查统计分析</h3>
+<p data-i18n="scene.1.body">在机构允许的前提下使用去标识化数据。确认变量与统计计划，检查运行环境、代码及实际输出；不能执行时不把示例当作结果。</p>
+</article>
+<article class="card">
+<span class="card-num">03</span>
+<h3 data-i18n="scene.2.title">推进论文草稿</h3>
+<p data-i18n="scene.2.body">以核实过的文献和实际分析结果为基础组织草稿。检查引用与数字，保留缺失信息；作者负责最终科学判断与投稿审核。</p>
+</article>
+</div>
+<aside class="evidence-note">
+<h3 data-i18n="difference.title">对话之外，更关注研究的衔接</h3>
+<p data-i18n="difference.body">Baselio 的设计重点是把问题、来源、方法与产出放在同一项目语境中，并保留研究者确认环节。是否适合你的任务，需要用实际版本与真实记录判断；AI 文本不能替代证据、执行或审稿。</p>
+</aside>
+</div>
+</section>
       <section class="section" id="capabilities">
         <div class="wrap">
           <p class="eyebrow" data-i18n="cap.eyebrow">产品能力</p>
@@ -163,6 +172,28 @@
         </div>
       </section>
 
+<section class="section section-alt" id="audience">
+<div class="wrap">
+<h2 data-i18n="audience.title">为你的研究方式，找到合适的入口</h2>
+<div class="grid grid-3">
+<article class="card">
+<h3 data-i18n="audience.0.title">医生 / 医学研究者</h3>
+<p data-i18n="audience.0.body">申请个人 Beta，说明当前科研阶段与最希望验证的任务。</p>
+<a href="beta.html?role=0" class="text-link" data-i18n="audience.link">申请 / 咨询 →</a>
+</article>
+<article class="card">
+<h3 data-i18n="audience.1.title">医院 / 研究机构</h3>
+<p data-i18n="audience.1.body">咨询研究团队试点，先讨论数据边界与院内评估；不承诺已提供私有部署。</p>
+<a href="beta.html?role=1" class="text-link" data-i18n="audience.link">申请 / 咨询 →</a>
+</article>
+<article class="card">
+<h3 data-i18n="audience.2.title">药企 / CRO</h3>
+<p data-i18n="audience.2.body">提交合作需求，明确研究目标与合规约束；机构协作能力需单独确认。</p>
+<a href="beta.html?role=2" class="text-link" data-i18n="audience.link">申请 / 咨询 →</a>
+</article>
+</div>
+</div>
+</section>
       <section class="section" id="trust">
         <div class="wrap">
           <p class="eyebrow" data-i18n="trust.eyebrow">数据与信任</p>
@@ -187,12 +218,22 @@
               </p>
             </article>
           </div>
-          <p class="fineprint" data-i18n="trust.note">
+          <aside class="evidence-note">
+<h3 data-i18n="privacy.title">使用前，先确认数据边界</h3>
+<p data-i18n="privacy.body">本机文件 → 任务所需内容 → 可能调用外部模型或连接服务。具体发送内容与目的地取决于版本和配置；隐私扫描不能保证识别所有敏感信息。不要提交患者资料、未授权数据或密钥。机构使用前应核查供应方、保存期限、删除方式与适用要求，不能将本页视为合规认证。</p>
+</aside>
+<p class="fineprint" data-i18n="trust.note">
             Baselio 不提供患者诊断、分诊或治疗建议，不替代临床专业判断。
           </p>
         </div>
       </section>
 
+<section class="section section-alt">
+<div class="wrap">
+<h2 data-i18n="pricing.title">Beta 与费用</h2>
+<p class="section-lede" data-i18n="pricing.body">当前采用邀请制。可用范围、模型费用、Credits 与机构试点条款需在邀请或咨询时确认；本页不承诺永久免费、固定额度或特定交付时间。</p>
+</div>
+</section>
       <section class="section section-alt" id="faq">
         <div class="wrap">
           <p class="eyebrow" data-i18n="faq.eyebrow">常见问题</p>
@@ -244,7 +285,7 @@
             <h2 data-i18n="cta.title">下一个研究问题，从这里开始</h2>
             <p data-i18n="cta.body">beta 期间小范围邀请，欢迎申请体验。</p>
           </div>
-          <a class="btn btn-primary btn-lg" href="mailto:hello@baselio.dev?subject=Baselio%20beta" data-i18n="cta.button">申请 beta</a>
+          <a class="btn btn-primary btn-lg" href="beta.html" data-i18n="cta.button">申请 beta</a>
         </div>
       </section>
     </main>
@@ -255,7 +296,7 @@
           <img src="logo.png" alt="" width="28" height="28" />
           <span class="brand-name">Baselio</span>
         </a>
-        <nav aria-label="页脚导航">
+        <nav aria-label="页脚导航" data-i18n-aria="a11y.footer">
           <a href="#trust" data-i18n="nav.trust">数据与信任</a>
           <a href="https://github.com/chenglei1479-rgb/hph-health" target="_blank" rel="noopener noreferrer">GitHub</a>
         </nav>
@@ -263,6 +304,7 @@
       </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="app.js">
+</script>
   </body>
 </html>
