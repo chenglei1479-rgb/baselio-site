@@ -14,7 +14,7 @@
       <div class="wrap header-inner">
         <a class="brand" href="index.html">
           <img src="logo.png" alt="" width="32" height="32" />
-          <span class="brand-name">Baselio</span>
+          <span class="brand-name" translate="no">Baselio</span>
         </a>
         <nav class="nav" aria-label="主导航" data-i18n-aria="a11y.nav">
           <a href="index.html#capabilities" data-i18n="nav.capabilities">产品能力</a>
@@ -40,34 +40,39 @@
 <h1 data-i18n="beta.title">申请 Baselio Beta</h1>
 <p class="section-lede" data-i18n="beta.intro">告诉我们你的研究需求。此表单仅在当前页面生成邮件草稿，不会自动提交或登记申请。请在邮件应用中核对并发送。</p>
 <p class="application-steps" data-i18n="beta.steps">填写需求 → 核对草稿 → 自行发送邮件</p>
+<noscript><p class="demo-note" data-i18n="beta.noScript">启用 JavaScript 后可生成申请草稿；也可通过下方邮箱直接联系。</p></noscript>
 <form id="beta-form" hidden aria-describedby="privacy-notice">
+<div id="form-errors" class="form-errors" tabindex="-1" role="alert" hidden></div>
 <label for="role" data-i18n="beta.role">你的身份</label>
-<select id="role" name="role" required>
+<select id="role" name="role" required aria-describedby="role-error">
 <option value="" data-i18n="beta.choose">请选择</option>
 <option value="0" data-i18n="audience.0.title">医生 / 医学研究者</option>
 <option value="1" data-i18n="audience.1.title">医院 / 研究机构</option>
 <option value="2" data-i18n="audience.2.title">药企 / CRO</option>
 </select>
+<p id="role-error" class="field-error" data-i18n="beta.errorRole" hidden>请选择你的身份。</p>
 <label for="institution" data-i18n="beta.org">机构名称（可选）</label>
 <input id="institution" name="institution" maxlength="120" autocomplete="organization">
 <label for="task" data-i18n="beta.task">最希望了解的任务</label>
-<select id="task" name="task" required>
+<select id="task" name="task" required aria-describedby="task-error">
 <option value="" data-i18n="beta.choose">请选择</option>
 <option value="0" data-i18n="beta.task0">文献检索与研究方案</option>
 <option value="1" data-i18n="beta.task1">统计分析与数据处理</option>
 <option value="2" data-i18n="beta.task2">论文草稿与引用核查</option>
 </select>
+<p id="task-error" class="field-error" data-i18n="beta.errorTask" hidden>请选择最希望了解的任务。</p>
 <p id="privacy-notice" class="fineprint" data-i18n="beta.notice">隐私提示：不填写患者资料、研究原始数据或其他保密信息。填写内容不会由本站自动保存；发送邮件后按邮件服务及收件方流程处理。申请状态与后续条款请通过邮件确认。</p>
 <label class="consent">
-<input type="checkbox" id="consent" required>
+<input type="checkbox" id="consent" name="consent" required aria-describedby="consent-error">
 <span data-i18n="beta.consent">我理解此操作只生成草稿，并确认未填写敏感信息。</span>
 </label>
+<p id="consent-error" class="field-error" data-i18n="beta.errorConsent" hidden>请确认你理解草稿流程，且未填写敏感信息。</p>
 <button type="submit" class="btn btn-primary" data-i18n="beta.prepare">生成邮件草稿</button>
 </form>
 <p id="draft-status" role="status" aria-live="polite">
 </p>
-<div id="draft-panel" hidden>
-<label for="draft" data-i18n="beta.draft">邮件草稿内容</label>
+<div id="draft-panel" tabindex="-1" aria-labelledby="draft-label" hidden>
+<label id="draft-label" for="draft" data-i18n="beta.draft">邮件草稿内容</label>
 <textarea id="draft" rows="12" readonly>
 </textarea>
 <button type="button" id="copy-draft" class="btn btn-ghost" data-i18n="beta.copy">复制草稿</button>
@@ -81,7 +86,7 @@
       <div class="wrap footer-inner">
         <a class="brand" href="index.html">
           <img src="logo.png" alt="" width="28" height="28" />
-          <span class="brand-name">Baselio</span>
+          <span class="brand-name" translate="no">Baselio</span>
         </a>
         <nav aria-label="页脚导航" data-i18n-aria="a11y.footer">
           <a href="trust.html" data-i18n="nav.trust">数据与信任</a>

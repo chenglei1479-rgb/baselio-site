@@ -2,6 +2,7 @@ const { test } = require('node:test')
 const assert = require('node:assert/strict')
 const fs = require('node:fs')
 const vm = require('node:vm')
+const crypto = require('node:crypto')
 const path = require('node:path')
 const root = path.join(__dirname, '..', 'public')
 const source = fs.readFileSync(path.join(root, 'app.js'), 'utf8')
@@ -17,7 +18,7 @@ function load(query = '?lang=zh', saved, blockedStorage = false, options = {}) {
     localStorage: { getItem() { if (blockedStorage) throw Error('denied'); return saved }, setItem() { if (blockedStorage) throw Error('denied') } }
   }
   vm.createContext(context)
-  vm.runInContext(source + '\n globalThis.catalog = dictionaries', context)
+  vm.runInContext(source + '\n globalThis.catalog = dictionaries; globalThis.validateBeta = betaErrors', context)
   return { context, select }
 }
 test('all visible copy and accessible labels exist in every language', () => {
@@ -25,7 +26,7 @@ test('all visible copy and accessible labels exist in every language', () => {
   const keys = new Set()
   for (const file of ['index.html', 'beta.html', 'trust.html']) {
     const html = fs.readFileSync(path.join(root, file), 'utf8')
-    for (const match of html.matchAll(/data-i18n(?:-aria)?="([^"]+)"/g)) keys.add(match[1])
+    for (const match of html.matchAll(/data-i18n(?:-aria|-alt)?="([^"]+)"/g)) keys.add(match[1])
   }
   for (const language of ['zh', 'en', 'ja']) {
     for (const key of keys) assert.ok(context.catalog[language][key], `${language}: ${key}`)
@@ -71,6 +72,23 @@ test('beta form stays inert without JavaScript and does not submit to a server',
 test('trust page uses its own translated title', () => {
   const { context } = load('?lang=en', null, false, { page: 'trust' })
   assert.equal(context.document.title, 'Baselio — Data and privacy: understand before use')
+})
+test('beta validation reports all omissions and rejects unsupported selections', () => {
+  const { context } = load()
+  assert.deepEqual(Array.from(context.validateBeta({ role: '', task: '', consent: false })), ['role', 'task', 'consent'])
+  assert.deepEqual(Array.from(context.validateBeta({ role: 'unknown', task: 'constructor', consent: true })), ['role', 'task'])
+  for (const role of ['0', '1', '2']) {
+    assert.deepEqual(Array.from(context.validateBeta({ role, task: '0', consent: true })), [])
+  }
+})
+test('product screenshots match the recorded original capture hashes', () => {
+  const record = JSON.parse(fs.readFileSync(path.join(root, 'media/provenance.json'), 'utf8'))
+  assert.equal(record.files.length, 2)
+  for (const file of record.files) {
+    const bytes = fs.readFileSync(path.join(root, 'media', file.path))
+    assert.equal(bytes.subarray(0, 3).toString('hex'), 'ffd8ff')
+    assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'), file.sha256)
+  }
 })
 function copyHarness(writeText) {
   let handler

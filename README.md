@@ -61,7 +61,8 @@ node --test tests/site.test.cjs
 复制按钮会在失败时选中草稿供手动复制，只有复制成功才显示成功提示；不发送邮件。
 JavaScript 不可用时不显示表单，但保留直接联系邮箱，防止原生表单把输入写入 URL。
 
-产品演示区明确说明尚无真实录屏/执行记录，不使用占位界面冒充产品。
-真实产品演示、申请后端、邀请状态、正式隐私条款和日语医学审校仍需补齐，详见 `docs/redesign-verification.md`。
+产品演示区使用获用户授权采集的真实桌面首页和内置虚构样本截图，版本为 0.1.33-beta.20。
+原始图片未经过生成式修改，来源、范围及校验值保存在 `public/media/provenance.json`。
+截图展示不代表完整科研流程验证。真实录屏、完整执行记录、申请后端、邀请状态、正式隐私条款和日语医学审校仍需补齐，详见 `docs/redesign-verification.md`。
 
 历史目标 `baselio-prototype.pages.dev` 与此仓库配置的 `baselio.pages.dev` 不同；本次未修改域名、Pages 项目或部署配置中的项目名，也未发布任一站点。

@@ -1,0 +1,20 @@
+{
+  "captureDate": "2026-10-31",
+  "productFileVersion": "0.1.33-beta.20",
+  "language": "zh",
+  "source": "User-authorised capture of the running Baselio desktop application",
+  "alterations": "None; original window captures",
+  "scope": "Task-entry screen and built-in synthetic sample preview only. Not full research workflow verification.",
+  "files": [
+    {
+      "path": "baselio-synthetic-sample.jpg",
+      "sha256": "e85b0807cfe7db9bc03a052504b7d2143d5436875af23f4af410f493610d0f3b",
+      "bytes": 84052
+    },
+    {
+      "path": "baselio-workspace.jpg",
+      "sha256": "a181d304ddbd03e18b2783b9af9444456b2db1fcf41cd48037de9f883da24b02",
+      "bytes": 80421
+    }
+  ]
+}

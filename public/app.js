@@ -245,8 +245,8 @@ const additions = {
     "hero.ctaSecondary": "了解研究流程",
     "hero.status": "邀请制 Beta · 具体可用能力以获邀版本为准",
     "demo.eyebrow": "产品演示",
-    "demo.title": "看清过程，再判断价值",
-    "demo.body": "当前尚未提供真实产品录屏与可复核执行记录，当前页面不提供在线科研执行。下面是使用场景说明，不是产品截图或已执行结果。申请 Beta 时可说明希望了解的流程。",
+    "demo.title": "看看真实的 Baselio 界面",
+    "demo.body": "以下是本机已打开产品的原始截图：首页任务入口，以及产品自带的虚构样本预览。样本界面显示 240 行合成记录的汇总，并明确说明未调用模型。它不是患者数据、真实研究结论或完整科研流程验证；官网本身不执行科研任务。",
     "scenes.title": "从门诊后的一个问题开始",
     "scenes.note": "场景说明 · 非执行结果",
     "scene.0.title": "准备研究",
@@ -318,7 +318,19 @@ const additions = {
     "beta.copyFallback": "无法自动复制，已选中草稿，请使用复制操作。",
     "beta.steps": "填写需求 → 核对草稿 → 自行发送邮件",
     "beta.next": "发送后会怎样？",
-    "beta.nextBody": "申请由团队通过邮件沟通，可用版本与邀请安排以回复为准。不保证即时开通；请勿重复发送患者资料或附件。"
+    "beta.nextBody": "申请由团队通过邮件沟通，可用版本与邀请安排以回复为准。不保证即时开通；请勿重复发送患者资料或附件。",
+    "beta.errors": "请完成以下项目，再生成草稿：",
+    "beta.errorRole": "请选择你的身份。",
+    "beta.errorTask": "请选择最希望了解的任务。",
+    "beta.errorConsent": "请确认你理解草稿流程，且未填写敏感信息。",
+    "beta.noScript": "启用 JavaScript 后可生成申请草稿；也可通过下方邮箱直接联系。",
+    "demo.homeCaption": "真实产品首页 · 研究主题与三类任务入口",
+    "demo.sampleCaption": "产品内置虚构样本 · 仅合成数据，非临床结论",
+    "demo.homeAlt": "Baselio 中文桌面首页，包含研究主题、咨询准备、数据分析与摘要论文入口",
+    "demo.sampleAlt": "Baselio 中文虚构样本预览，明确标注合成数据，并显示 240 行中 40 行的示例汇总",
+    "demo.open": "查看原始截图（新窗口）",
+    "demo.captureNote": "截图来自当前本机中文界面，未经生成式修改；日期为本次采集日。其他版本与配置可能不同。下方场景说明不是执行结果。",
+    "demo.version": "采集版本：0.1.33-beta.20 · 2026-10-31 · 中文界面"
   },
   "en": {
     "hero.line1": "From a clinical question,",
@@ -327,8 +339,8 @@ const additions = {
     "hero.ctaSecondary": "Explore the workflow",
     "hero.status": "Invitation-only beta · Availability depends on your invited version",
     "demo.eyebrow": "Product demonstration",
-    "demo.title": "See the process. Judge the evidence.",
-    "demo.body": "A real product recording and verifiable run records are not yet available on this page. This page does not run research tasks. The scenarios below explain intended use; they are not product screenshots or executed results. Tell us which workflow you would like to explore when requesting beta access.",
+    "demo.title": "See the actual Baselio interface",
+    "demo.body": "These unaltered captures show the running desktop product: its task entry points and built-in synthetic sample preview. The preview displays a summary of 240 synthetic records and states that no model was called. It is not patient data, a real research conclusion or verification of a complete research workflow. This website does not execute research tasks.",
     "scenes.title": "Start with a question after clinic",
     "scenes.note": "Illustrative scenarios · Not executed results",
     "scene.0.title": "Plan a study",
@@ -400,7 +412,19 @@ const additions = {
     "beta.copyFallback": "Automatic copy is unavailable. The draft is selected; use your device’s copy command.",
     "beta.steps": "Describe your needs → Review the draft → Send the email yourself",
     "beta.next": "What happens after sending?",
-    "beta.nextBody": "The team communicates by email. Availability and invitations are subject to their reply; immediate access is not guaranteed. Do not send patient information or attachments."
+    "beta.nextBody": "The team communicates by email. Availability and invitations are subject to their reply; immediate access is not guaranteed. Do not send patient information or attachments.",
+    "beta.errors": "Complete the following before preparing your draft:",
+    "beta.errorRole": "Select your role.",
+    "beta.errorTask": "Select a workflow of interest.",
+    "beta.errorConsent": "Confirm that you understand the draft process and have included no sensitive information.",
+    "beta.noScript": "Enable JavaScript to prepare an enquiry draft, or contact the email address below directly.",
+    "demo.homeCaption": "Actual product home · Research question and three task entry points",
+    "demo.sampleCaption": "Built-in synthetic sample · Synthetic data only, no clinical conclusions",
+    "demo.homeAlt": "Baselio desktop home in Chinese, showing a research question and entries for consultation preparation, data analysis and drafting",
+    "demo.sampleAlt": "Baselio synthetic sample preview in Chinese, labelled as synthetic data, displaying an example summary of 40 out of 240 rows",
+    "demo.open": "View original capture (new tab)",
+    "demo.captureNote": "Captured from the current local Chinese interface without generative alterations. Other versions and configurations may differ. The scenarios below are not executed results.",
+    "demo.version": "Captured version: 0.1.33-beta.20 · 2026-10-31 · Chinese interface"
   },
   "ja": {
     "hero.line1": "臨床の問いから、",
@@ -409,8 +433,8 @@ const additions = {
     "hero.ctaSecondary": "研究の流れを見る",
     "hero.status": "招待制ベータ · 利用できる機能は提供バージョンにより異なります",
     "demo.eyebrow": "製品デモ",
-    "demo.title": "過程を見て、価値を判断する",
-    "demo.body": "実際の製品録画と検証可能な実行記録は、このページではまだ公開していません。このページで研究タスクは実行できません。以下は利用場面の説明であり、製品画面や実行結果ではありません。申し込み時に確認したい流れをお知らせください。",
+    "demo.title": "実際の Baselio の画面を見る",
+    "demo.body": "起動中のデスクトップ製品から撮影した未加工の画面です。タスク選択と内蔵の架空サンプル表示を紹介します。画面には合成データ 240 行の集計と、モデルを呼び出していない旨が表示されています。患者情報、実際の研究結果、研究工程全体の検証を示すものではありません。このサイトでは研究タスクを実行しません。",
     "scenes.title": "診療後に浮かんだ問いから",
     "scenes.note": "利用場面の説明 · 実行結果ではありません",
     "scene.0.title": "研究計画を準備する",
@@ -482,7 +506,19 @@ const additions = {
     "beta.copyFallback": "自動コピーができません。下書きを選択したので、端末のコピー操作をお使いください。",
     "beta.steps": "希望を入力 → 下書きを確認 → ご自身でメール送信",
     "beta.next": "送信後について",
-    "beta.nextBody": "担当チームがメールでご案内します。提供バージョンと招待については返信で確認してください。即時利用を保証するものではありません。患者情報や添付資料は送らないでください。"
+    "beta.nextBody": "担当チームがメールでご案内します。提供バージョンと招待については返信で確認してください。即時利用を保証するものではありません。患者情報や添付資料は送らないでください。",
+    "beta.errors": "次の項目を確認してから下書きを作成してください：",
+    "beta.errorRole": "ご所属・立場を選択してください。",
+    "beta.errorTask": "確認したい作業を選択してください。",
+    "beta.errorConsent": "下書き作成の流れと、機微情報を含めていないことを確認してください。",
+    "beta.noScript": "JavaScript を有効にすると下書きを作成できます。下のメールアドレスへ直接お問い合わせいただくことも可能です。",
+    "demo.homeCaption": "実際のホーム画面 · 研究テーマと 3 つのタスク入口",
+    "demo.sampleCaption": "製品内蔵の架空サンプル · 合成データのみ、臨床上の結論ではありません",
+    "demo.homeAlt": "中国語版 Baselio のホーム画面。研究テーマ、指導医相談の準備、データ解析、論文草稿の入口を表示",
+    "demo.sampleAlt": "中国語版 Baselio の架空サンプル。合成データと明記され、240 行中 40 行の集計例を表示",
+    "demo.open": "元のスクリーンショットを表示（新しいタブ）",
+    "demo.captureNote": "現在の端末で起動中の中国語画面を撮影し、生成 AI による加工はしていません。バージョンや設定により異なる場合があります。以下の利用場面は実行結果ではありません。",
+    "demo.version": "撮影バージョン：0.1.33-beta.20 · 2026-10-31 · 中国語画面"
   }
 }
 for (const language of Object.keys(additions)) Object.assign(dictionaries[language], additions[language])
@@ -492,6 +528,28 @@ const select = document.getElementById('language')
 let currentLanguage = 'zh'
 const form = document.getElementById('beta-form')
 const isTrustPage = document.body?.dataset.page === 'trust'
+const betaErrors = ({ role, task, consent }) => [
+  ...(['0', '1', '2'].includes(role) ? [] : ['role']),
+  ...(['0', '1', '2'].includes(task) ? [] : ['task']),
+  ...(consent ? [] : ['consent'])
+]
+const renderErrors = (errors, focus = false) => {
+  if (!form) return
+  const dictionary = dictionaries[currentLanguage]
+  const keys = { role: 'beta.errorRole', task: 'beta.errorTask', consent: 'beta.errorConsent' }
+  for (const id of Object.keys(keys)) {
+    const field = document.getElementById(id)
+    const message = document.getElementById(id + '-error')
+    message.textContent = dictionary[keys[id]]
+    message.hidden = !errors.includes(id)
+    if (errors.includes(id)) field.setAttribute('aria-invalid', 'true')
+    else field.removeAttribute('aria-invalid')
+  }
+  const summary = document.getElementById('form-errors')
+  summary.hidden = errors.length === 0
+  summary.textContent = errors.length ? dictionary['beta.errors'] + ' ' + errors.map(id => dictionary[keys[id]]).join(' ') : ''
+  if (focus && errors.length) summary.focus()
+}
 const clearDraft = () => {
   const panel = document.getElementById('draft-panel')
   if (!panel || panel.hidden) return
@@ -512,6 +570,9 @@ const applyLanguage = (language) => {
   for (const node of document.querySelectorAll('[data-i18n-aria]')) {
     node.setAttribute('aria-label', dictionary[node.dataset.i18nAria])
   }
+  for (const node of document.querySelectorAll('[data-i18n-alt]')) {
+    node.setAttribute('alt', dictionary[node.dataset.i18nAlt])
+  }
   document.querySelector('meta[name="description"]').content = dictionary[isTrustPage ? 'privacy.intro' : form ? 'beta.intro' : 'hero.lede']
   const url = new URL(location.href)
   url.searchParams.set('lang', currentLanguage)
@@ -525,6 +586,9 @@ const applyLanguage = (language) => {
   }
   if (select) select.value = currentLanguage
   clearDraft()
+  if (form && !document.getElementById('form-errors').hidden) {
+    renderErrors(betaErrors({ role: form.elements.role.value, task: form.elements.task.value, consent: form.elements.consent.checked }))
+  }
 }
 const requested = new URLSearchParams(location.search).get('lang')
 let saved
@@ -536,13 +600,23 @@ select?.addEventListener('change', (event) => {
 })
 if (form) {
   form.hidden = false
+  form.noValidate = true
   const role = new URLSearchParams(location.search).get('role')
   if (['0', '1', '2'].includes(role)) form.elements.role.value = role
   form.addEventListener('input', clearDraft)
   form.addEventListener('change', clearDraft)
+  const refreshVisibleErrors = () => {
+    if (!document.getElementById('form-errors').hidden) {
+      renderErrors(betaErrors({ role: form.elements.role.value, task: form.elements.task.value, consent: form.elements.consent.checked }))
+    }
+  }
+  form.addEventListener('input', refreshVisibleErrors)
+  form.addEventListener('change', refreshVisibleErrors)
   form.addEventListener('submit', (event) => {
     event.preventDefault()
-    if (!form.reportValidity()) return
+    const errors = betaErrors({ role: form.elements.role.value, task: form.elements.task.value, consent: form.elements.consent.checked })
+    renderErrors(errors, true)
+    if (errors.length) return
     const d = dictionaries[currentLanguage]
     const body = [d['beta.subject'], '', d['beta.role'] + ': ' + form.elements.role.selectedOptions[0].textContent,
       d['beta.org'] + ': ' + form.elements.institution.value.trim(),
@@ -551,6 +625,7 @@ if (form) {
     document.getElementById('draft').value = body
     document.getElementById('open-mail').href = 'mailto:hello@baselio.dev?subject=' + encodeURIComponent(d['beta.subject']) + '&body=' + encodeURIComponent(body)
     document.getElementById('draft-panel').hidden = false
+    document.getElementById('draft-panel').focus()
     document.getElementById('draft-status').textContent = d['beta.ready']
   })
 }
