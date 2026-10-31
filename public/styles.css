@@ -534,6 +534,10 @@ form [aria-invalid="true"] { border: 2px solid #9e2d28 !important; }
 .product-gallery img { display: block; width: 100%; height: auto; }
 .product-gallery figcaption { margin-top: 12px; color: var(--muted); font-size: 14px; }
 .product-gallery + .fineprint { margin: 20px 0 40px; }
+.product-overview { margin: 28px 0 36px; }
+.product-overview a { display: block; border: 1px solid #6d8678; border-radius: 16px; overflow: hidden; background: var(--bg-soft); }
+.product-overview img { display: block; width: 100%; height: auto; object-fit: contain; }
+.product-overview figcaption { margin-top: 14px; color: var(--muted); font-size: 15px; }
 @media (max-width: 700px) { .product-gallery { grid-template-columns: 1fr; } }
 .hero h1 { font-size: clamp(36px, 4vw, 58px); }
 .research-path { padding: 30px; border: 1px solid #547565; border-radius: 20px; background: #193d32; color: #f5faf7; }

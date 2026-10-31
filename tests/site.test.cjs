@@ -83,12 +83,20 @@ test('beta validation reports all omissions and rejects unsupported selections',
 })
 test('product screenshots match the recorded original capture hashes', () => {
   const record = JSON.parse(fs.readFileSync(path.join(root, 'media/provenance.json'), 'utf8'))
-  assert.equal(record.files.length, 2)
+  assert.equal(record.language, 'en')
+  assert.equal(record.files.length, 3)
   for (const file of record.files) {
     const bytes = fs.readFileSync(path.join(root, 'media', file.path))
     assert.equal(bytes.subarray(0, 3).toString('hex'), 'ffd8ff')
     assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'), file.sha256)
   }
+})
+test('English full workbench is the lead product image', () => {
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8')
+  const overview = html.indexOf('src="media/baselio-workbench-en.jpg"')
+  assert.ok(overview > 0 && overview < html.indexOf('src="media/baselio-home-en.jpg"'))
+  assert.match(html, /class="product-overview"/)
+  assert.doesNotMatch(html, /src="media\/baselio-workspace\.jpg"/)
 })
 function copyHarness(writeText) {
   let handler
