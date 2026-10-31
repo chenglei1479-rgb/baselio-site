@@ -10,6 +10,7 @@ public/            ← 部署目录（Cloudflare Pages 直接上传这个目录�
   styles.css
   app.js           ← 三语字典（zh / en / ja）+ 语言切换
   beta.html        ← 分层申请，生成邮件草稿，不连接申请后端
+  trust.html       ← 官网与科研产品的数据边界说明
   logo.png         ← 应用图标
 .github/workflows/deploy.yml   ← 推 main 自动发布
 ```
@@ -57,6 +58,7 @@ node --test tests/site.test.cjs
 `beta.html?role=0|1|2&lang=zh|en|ja` 支持个人、医院/机构和药企/CRO 入口预选。
 必填身份、任务和确认框后，生成可核对的邮件草稿；点击邮件链接才会尝试打开邮件应用，仍需用户发送。
 没有邮件应用时可复制草稿并发到页面列出的邮箱。本站不保存申请，也不追踪邀请状态。
+复制按钮会在失败时选中草稿供手动复制，只有复制成功才显示成功提示；不发送邮件。
 JavaScript 不可用时不显示表单，但保留直接联系邮箱，防止原生表单把输入写入 URL。
 
 产品演示区明确说明尚无真实录屏/执行记录，不使用占位界面冒充产品。

@@ -19,7 +19,7 @@
         <nav class="nav" aria-label="主导航" data-i18n-aria="a11y.nav">
           <a href="index.html#capabilities" data-i18n="nav.capabilities">产品能力</a>
           <a href="index.html#workflow" data-i18n="nav.workflow">研究流程</a>
-          <a href="index.html#trust" data-i18n="nav.trust">数据与信任</a>
+          <a href="trust.html" data-i18n="nav.trust">数据与信任</a>
           <a href="index.html#faq" data-i18n="nav.faq">常见问题</a>
         </nav>
         <div class="header-actions">
@@ -39,7 +39,8 @@
 <a href="index.html" class="text-link" data-i18n="beta.back">返回首页</a>
 <h1 data-i18n="beta.title">申请 Baselio Beta</h1>
 <p class="section-lede" data-i18n="beta.intro">告诉我们你的研究需求。此表单仅在当前页面生成邮件草稿，不会自动提交或登记申请。请在邮件应用中核对并发送。</p>
-<form id="beta-form" hidden>
+<p class="application-steps" data-i18n="beta.steps">填写需求 → 核对草稿 → 自行发送邮件</p>
+<form id="beta-form" hidden aria-describedby="privacy-notice">
 <label for="role" data-i18n="beta.role">你的身份</label>
 <select id="role" name="role" required>
 <option value="" data-i18n="beta.choose">请选择</option>
@@ -56,7 +57,7 @@
 <option value="1" data-i18n="beta.task1">统计分析与数据处理</option>
 <option value="2" data-i18n="beta.task2">论文草稿与引用核查</option>
 </select>
-<p class="fineprint" data-i18n="beta.notice">隐私提示：不填写患者资料、研究原始数据或其他保密信息。填写内容不会由本站自动保存；发送邮件后按邮件服务及收件方流程处理。申请状态与后续条款请通过邮件确认。</p>
+<p id="privacy-notice" class="fineprint" data-i18n="beta.notice">隐私提示：不填写患者资料、研究原始数据或其他保密信息。填写内容不会由本站自动保存；发送邮件后按邮件服务及收件方流程处理。申请状态与后续条款请通过邮件确认。</p>
 <label class="consent">
 <input type="checkbox" id="consent" required>
 <span data-i18n="beta.consent">我理解此操作只生成草稿，并确认未填写敏感信息。</span>
@@ -69,8 +70,10 @@
 <label for="draft" data-i18n="beta.draft">邮件草稿内容</label>
 <textarea id="draft" rows="12" readonly>
 </textarea>
+<button type="button" id="copy-draft" class="btn btn-ghost" data-i18n="beta.copy">复制草稿</button>
 <a id="open-mail" class="btn btn-primary" data-i18n="beta.open">打开邮件应用</a>
 </div>
+<aside class="evidence-note"><h2  data-i18n="beta.next">发送后会怎样？</h2><p  data-i18n="beta.nextBody">申请由团队通过邮件沟通，可用版本与邀请安排以回复为准。不保证即时开通；请勿重复发送患者资料或附件。</p><a href="trust.html" class="text-link" data-i18n="privacy.link">查看数据与隐私说明 →</a></aside>
 <a href="mailto:hello@baselio.dev" class="text-link" data-i18n="beta.fallback">也可直接邮件联系 hello@baselio.dev</a>
 </div>
 </section>
@@ -81,7 +84,7 @@
           <span class="brand-name">Baselio</span>
         </a>
         <nav aria-label="页脚导航" data-i18n-aria="a11y.footer">
-          <a href="index.html#trust" data-i18n="nav.trust">数据与信任</a>
+          <a href="trust.html" data-i18n="nav.trust">数据与信任</a>
           <a href="https://github.com/chenglei1479-rgb/hph-health" target="_blank" rel="noopener noreferrer">GitHub</a>
         </nav>
         <p class="copyright">© 2026 Baselio</p>

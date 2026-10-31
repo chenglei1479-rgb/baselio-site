@@ -292,7 +292,33 @@ const additions = {
     "beta.fallback": "也可直接邮件联系 hello@baselio.dev",
     "beta.back": "返回首页",
     "beta.changed": "申请内容已更改，请重新生成草稿。",
-    "beta.subject": "Baselio Beta 申请 / 合作咨询"
+    "beta.subject": "Baselio Beta 申请 / 合作咨询",
+    "path.label": "研究路径示意 · 非实时执行",
+    "path.title": "让下一步，有迹可循",
+    "path.0": "一个明确的临床问题",
+    "path.1": "可回查的文献来源",
+    "path.2": "经确认的方法与分析",
+    "path.3": "需要作者审核的草稿",
+    "path.review": "每个阶段，由研究者判断",
+    "privacy.link": "查看数据与隐私说明 →",
+    "privacy.pageTitle": "数据与隐私：先了解，再使用",
+    "privacy.intro": "这里区分官网申请流程与科研产品的数据边界。具体配置和机构要求，仍需在使用前逐项核实。",
+    "privacy.0.title": "官网如何使用你的填写内容",
+    "privacy.0.body": "申请页在浏览器内生成草稿，没有申请数据库或自动提交。只有你在邮件应用中发送后，内容才会作为邮件发给 hello@baselio.dev。可联系该邮箱咨询已发送申请的处理或删除；本页不承诺删除期限。",
+    "privacy.1.title": "语言偏好与网站托管",
+    "privacy.1.body": "官网仅在本机存储所选语言；未接入分析或广告脚本。页面由 Cloudflare Pages 托管，访问仍会产生网络请求，托管服务可能处理 IP 等连接信息。不要将静态网站等同于完全匿名访问。",
+    "privacy.2.title": "科研内容可能流向哪里",
+    "privacy.2.body": "桌面运行不等于完全离线。任务可能调用外部模型或你配置的连接服务；具体内容、接收方与保存方式需按实际版本核查。隐私扫描不是授权替代品，也无法保证识别全部患者信息。",
+    "privacy.3.title": "机构评估清单",
+    "privacy.3.body": "使用前确认：允许处理的数据类型、外部供应方与地域、模型训练使用条款、访问控制、保存与删除、导出及审计要求。未确认前不要上传患者资料或保密研究数据。机构部署与合规能力需单独协商。",
+    "privacy.boundary": "说明范围",
+    "privacy.boundaryBody": "这些说明不是正式服务条款、合规认证或医疗建议。产品供应方清单、保存期限与适用政策尚需正式确认；网站上的产品描述不能替代实际版本验证。",
+    "beta.copy": "复制草稿",
+    "beta.copied": "已复制草稿，尚未发送。",
+    "beta.copyFallback": "无法自动复制，已选中草稿，请使用复制操作。",
+    "beta.steps": "填写需求 → 核对草稿 → 自行发送邮件",
+    "beta.next": "发送后会怎样？",
+    "beta.nextBody": "申请由团队通过邮件沟通，可用版本与邀请安排以回复为准。不保证即时开通；请勿重复发送患者资料或附件。"
   },
   "en": {
     "hero.line1": "From a clinical question,",
@@ -348,7 +374,33 @@ const additions = {
     "beta.fallback": "You can also email hello@baselio.dev directly",
     "beta.back": "Back to home",
     "beta.changed": "Your entries changed. Prepare a new draft.",
-    "beta.subject": "Baselio beta request / enquiry"
+    "beta.subject": "Baselio beta request / enquiry",
+    "path.label": "Illustrative research path · Not a live run",
+    "path.title": "Make the next step traceable",
+    "path.0": "A focused clinical question",
+    "path.1": "Sources you can revisit",
+    "path.2": "Reviewed methods and analysis",
+    "path.3": "A draft for author review",
+    "path.review": "Researcher judgement at every stage",
+    "privacy.link": "Read data and privacy notes →",
+    "privacy.pageTitle": "Data and privacy: understand before use",
+    "privacy.intro": "The website enquiry and the research product have different data boundaries. Review the actual configuration and institutional requirements before use.",
+    "privacy.0.title": "What happens to website entries",
+    "privacy.0.body": "The enquiry page prepares a draft in your browser without an application database or automatic submission. Only after you send it in your email app is it emailed to hello@baselio.dev. Contact that address about handling or deleting a sent request; no deletion timeframe is promised here.",
+    "privacy.1.title": "Language preference and hosting",
+    "privacy.1.body": "The site stores the selected language locally and includes no analytics or advertising scripts. It is hosted on Cloudflare Pages; visits still make network requests, and the hosting service may process connection information such as IP addresses. A static website does not mean fully anonymous access.",
+    "privacy.2.title": "Where research content may go",
+    "privacy.2.body": "Running on a desktop does not mean fully offline. Tasks may call external models or services you configure. Check the actual version for payloads, recipients and retention. Privacy screening does not replace authorisation or guarantee detection of all patient information.",
+    "privacy.3.title": "Institutional review checklist",
+    "privacy.3.body": "Before use, review permitted data, external providers and regions, model training terms, access controls, retention and deletion, export and audit requirements. Do not upload patient records or confidential research data before approval. Institutional deployment and compliance capabilities require separate discussion.",
+    "privacy.boundary": "Scope of these notes",
+    "privacy.boundaryBody": "These notes are not formal service terms, a compliance certification or medical advice. Product provider lists, retention periods and applicable policies still require formal confirmation. Website descriptions cannot replace verification of the actual version.",
+    "beta.copy": "Copy draft",
+    "beta.copied": "Draft copied, not sent.",
+    "beta.copyFallback": "Automatic copy is unavailable. The draft is selected; use your device’s copy command.",
+    "beta.steps": "Describe your needs → Review the draft → Send the email yourself",
+    "beta.next": "What happens after sending?",
+    "beta.nextBody": "The team communicates by email. Availability and invitations are subject to their reply; immediate access is not guaranteed. Do not send patient information or attachments."
   },
   "ja": {
     "hero.line1": "臨床の問いから、",
@@ -404,7 +456,33 @@ const additions = {
     "beta.fallback": "hello@baselio.dev への直接のお問い合わせも可能です",
     "beta.back": "ホームへ戻る",
     "beta.changed": "入力内容が変わりました。下書きを作り直してください。",
-    "beta.subject": "Baselio ベータ申し込み・相談"
+    "beta.subject": "Baselio ベータ申し込み・相談",
+    "path.label": "研究の流れの例 · 実行画面ではありません",
+    "path.title": "次の一歩に、たどれる根拠を",
+    "path.0": "明確な臨床の問い",
+    "path.1": "確認できる文献の出典",
+    "path.2": "確認を経た手法と解析",
+    "path.3": "著者が確認する草稿",
+    "path.review": "各段階の判断は研究者が担います",
+    "privacy.link": "データ・プライバシーの説明 →",
+    "privacy.pageTitle": "データとプライバシー：確認してから利用する",
+    "privacy.intro": "Web サイトでのお申し込みと研究用製品では、データの取扱いが異なります。利用前に実際の設定と所属機関の規則をご確認ください。",
+    "privacy.0.title": "フォームの入力内容について",
+    "privacy.0.body": "申し込みページはブラウザ内で下書きを作成し、申込データベースへの保存・自動送信は行いません。メールアプリで送信した内容が hello@baselio.dev に届きます。送信済み内容の取扱い・削除は同アドレスにご相談ください。削除期限は本ページではお約束していません。",
+    "privacy.1.title": "言語設定とホスティング",
+    "privacy.1.body": "本サイトは選択した言語を端末に保存し、アクセス解析・広告スクリプトは組み込んでいません。Cloudflare Pages で配信され、アクセス時に通信が発生します。ホスティングサービスが IP アドレス等の接続情報を扱う可能性があり、完全な匿名アクセスを意味しません。",
+    "privacy.2.title": "研究内容の送信先について",
+    "privacy.2.body": "デスクトップでの実行は完全オフラインを意味しません。外部モデルや設定した連携サービスを利用する場合があります。送信内容、受信先、保存方法は実際のバージョンで確認してください。スキャンは利用許可の代わりにはならず、患者情報を必ず検出できるとは限りません。",
+    "privacy.3.title": "所属機関での確認事項",
+    "privacy.3.body": "利用前に、取扱可能なデータ、外部提供元と処理地域、モデル学習への利用条件、アクセス制御、保存・削除、出力・監査要件を確認してください。承認前に患者情報や機密研究データを入力しないでください。組織向けの提供形態や適合性は個別に相談が必要です。",
+    "privacy.boundary": "説明の範囲",
+    "privacy.boundaryBody": "この説明は正式な利用規約、適合認証、医療上の助言ではありません。製品の提供元一覧、保存期間、適用方針は正式な確認が必要です。Web サイト上の説明は実際のバージョンの検証に代わりません。",
+    "beta.copy": "下書きをコピー",
+    "beta.copied": "下書きをコピーしました。まだ送信していません。",
+    "beta.copyFallback": "自動コピーができません。下書きを選択したので、端末のコピー操作をお使いください。",
+    "beta.steps": "希望を入力 → 下書きを確認 → ご自身でメール送信",
+    "beta.next": "送信後について",
+    "beta.nextBody": "担当チームがメールでご案内します。提供バージョンと招待については返信で確認してください。即時利用を保証するものではありません。患者情報や添付資料は送らないでください。"
   }
 }
 for (const language of Object.keys(additions)) Object.assign(dictionaries[language], additions[language])
@@ -413,6 +491,7 @@ const storageKey = 'baselio-language'
 const select = document.getElementById('language')
 let currentLanguage = 'zh'
 const form = document.getElementById('beta-form')
+const isTrustPage = document.body?.dataset.page === 'trust'
 const clearDraft = () => {
   const panel = document.getElementById('draft-panel')
   if (!panel || panel.hidden) return
@@ -425,7 +504,7 @@ const applyLanguage = (language) => {
   currentLanguage = Object.hasOwn(dictionaries, language) ? language : 'zh'
   const dictionary = dictionaries[currentLanguage]
   document.documentElement.lang = currentLanguage
-  document.title = 'Baselio — ' + dictionary[form ? 'beta.title' : 'hero.line1'] + (form ? '' : (currentLanguage === 'en' ? ' ' : '') + dictionary['hero.line2'])
+  document.title = 'Baselio — ' + dictionary[isTrustPage ? 'privacy.pageTitle' : form ? 'beta.title' : 'hero.line1'] + (form || isTrustPage ? '' : (currentLanguage === 'en' ? ' ' : '') + dictionary['hero.line2'])
   for (const node of document.querySelectorAll('[data-i18n]')) {
     const value = dictionary[node.dataset.i18n]
     if (typeof value === 'string') node.textContent = value
@@ -433,13 +512,13 @@ const applyLanguage = (language) => {
   for (const node of document.querySelectorAll('[data-i18n-aria]')) {
     node.setAttribute('aria-label', dictionary[node.dataset.i18nAria])
   }
-  document.querySelector('meta[name="description"]').content = dictionary[form ? 'beta.intro' : 'hero.lede']
+  document.querySelector('meta[name="description"]').content = dictionary[isTrustPage ? 'privacy.intro' : form ? 'beta.intro' : 'hero.lede']
   const url = new URL(location.href)
   url.searchParams.set('lang', currentLanguage)
   history.replaceState(null, '', url)
   for (const link of document.querySelectorAll('a[href]')) {
     const href = link.getAttribute('href')
-    if (!/^(index|beta)\.html(?:[?#]|$)/.test(href)) continue
+    if (!/^(index|beta|trust)\.html(?:[?#]|$)/.test(href)) continue
     const target = new URL(href, location.href)
     target.searchParams.set('lang', currentLanguage)
     link.setAttribute('href', target.pathname.split('/').pop() + target.search + target.hash)
@@ -475,3 +554,18 @@ if (form) {
     document.getElementById('draft-status').textContent = d['beta.ready']
   })
 }
+
+document.getElementById('copy-draft')?.addEventListener('click', async () => {
+  const draft = document.getElementById('draft')
+  const original = draft.value
+  try {
+    await navigator.clipboard.writeText(original)
+    if (draft.value !== original || document.getElementById('draft-panel').hidden) return
+    document.getElementById('draft-status').textContent = dictionaries[currentLanguage]['beta.copied']
+  } catch {
+    if (draft.value !== original || document.getElementById('draft-panel').hidden) return
+    draft.focus()
+    draft.select()
+    document.getElementById('draft-status').textContent = dictionaries[currentLanguage]['beta.copyFallback']
+  }
+})
