@@ -1,36 +1,48 @@
 name: Deploy site
-
 on:
   push:
     branches: [main]
   workflow_dispatch:
-
 permissions:
   contents: read
-
 concurrency:
   group: deploy-site
   cancel-in-progress: true
-
 jobs:
-  deploy:
+  check:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    env:
-      API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    outputs:
+      can_deploy: ${{ steps.credentials.outputs.available }}
     steps:
       - uses: actions/checkout@v4
-
-      - name: Explain the skipped deploy
-        if: env.API_TOKEN == '' || env.ACCOUNT_ID == ''
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check public/app.js
+      - run: node --test tests/site.test.cjs
+      - name: Check deployment credentials
+        id: credentials
+        env:
+          API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          echo "Skipped: this run needs CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID." >> "$GITHUB_STEP_SUMMARY"
-          echo "Until they exist, deploy with: npx wrangler pages deploy public --project-name baselio --branch main" >> "$GITHUB_STEP_SUMMARY"
-
+          if [ -n "$API_TOKEN" ] && [ -n "$ACCOUNT_ID" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Not deployed: Cloudflare credentials are not configured."
+            echo "Not deployed. Configure Cloudflare repository secrets or use the authorised local Wrangler session." >> "$GITHUB_STEP_SUMMARY"
+          fi
+  deploy:
+    needs: check
+    if: github.ref == 'refs/heads/main' && needs.check.outputs.can_deploy == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
       - name: Deploy to Cloudflare Pages
-        if: env.API_TOKEN != '' && env.ACCOUNT_ID != ''
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy public --project-name baselio --branch main
+          command: pages deploy public --project-name baselio-prototype --branch main

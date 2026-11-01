@@ -1,0 +1,31 @@
+{
+  "captureDate": "2026-11-01",
+  "productFileVersion": "0.1.33-beta.20",
+  "language": "en",
+  "source": "User-authorised captures of the running Baselio desktop application",
+  "alterations": "None; original full-window captures",
+  "scope": "Empty demo workbench, home task entries, and built-in synthetic sample. No model requests or research tasks executed. One existing Japanese shortcut label remains visible in the English workbench.",
+  "files": [
+    {
+      "path": "baselio-workbench-en.jpg",
+      "sha256": "586fb2d573836bc1695a89ebac309d40030242536a88ac9e793e657dbe588a0f",
+      "bytes": 59534,
+      "width": 1281,
+      "height": 852
+    },
+    {
+      "path": "baselio-home-en.jpg",
+      "sha256": "69321e121a49ab271b1b622caeecf91af1ad028b601b0b9e78496e59ea32be7b",
+      "bytes": 91303,
+      "width": 1440,
+      "height": 852
+    },
+    {
+      "path": "baselio-sample-en.jpg",
+      "sha256": "930c0b9a1affc14b0033a738e1465a4f0602427e4aa7265b422902769066dd1f",
+      "bytes": 90504,
+      "width": 1281,
+      "height": 852
+    }
+  ]
+}
