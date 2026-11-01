@@ -65,7 +65,7 @@ test('static links resolve, ids are unique and each page has one main heading', 
 test('beta form stays inert without JavaScript and does not submit to a server', () => {
   const html = fs.readFileSync(path.join(root, 'beta.html'), 'utf8')
   assert.match(html, /<form id="beta-form" hidden aria-describedby="privacy-notice">/)
-  assert.match(html, /href="mailto:hello@baselio.dev"/)
+  assert.match(html, /href="mailto:chenglei1479@gmail.com"/)
   assert.doesNotMatch(source, /\bfetch\s*\(|XMLHttpRequest|sendBeacon/)
   assert.match(source, /event.preventDefault\(\)/)
 })
@@ -97,6 +97,33 @@ test('English full workbench is the lead product image', () => {
   assert.ok(overview > 0 && overview < html.indexOf('src="media/baselio-home-en.jpg"'))
   assert.match(html, /class="product-overview"/)
   assert.doesNotMatch(html, /src="media\/baselio-workspace\.jpg"/)
+})
+test('all contact paths use the approved public email', () => {
+  const { context } = load()
+  for (const language of ['zh', 'en', 'ja']) {
+    for (const key of ['beta.ready', 'beta.fallback', 'privacy.0.body']) {
+      assert.ok(context.catalog[language][key].includes('chenglei1479@gmail.com'))
+    }
+  }
+  for (const file of ['index.html', 'beta.html', 'trust.html', 'app.js']) {
+    const text = fs.readFileSync(path.join(root, file), 'utf8')
+    assert.ok(text.includes('mailto:chenglei1479@gmail.com'))
+    assert.ok(!text.includes('hello@baselio.dev'))
+  }
+})
+test('main body text palette meets normal-text contrast', () => {
+  const css = fs.readFileSync(path.join(root, 'styles.css'), 'utf8')
+  const color = name => css.match(new RegExp('--' + name + ':\\s*(#[a-fA-F0-9]{6})'))[1]
+  const luminance = hex => {
+    const rgb = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255).map(n => n <= 0.04045 ? n / 12.92 : ((n + 0.055) / 1.055) ** 2.4)
+    return rgb[0] * 0.2126 + rgb[1] * 0.7152 + rgb[2] * 0.0722
+  }
+  for (const foreground of ['ink', 'muted', 'accent']) {
+    for (const background of ['bg', 'bg-soft']) {
+      const values = [luminance(color(foreground)), luminance(color(background))].sort((a, b) => b - a)
+      assert.ok((values[0] + 0.05) / (values[1] + 0.05) >= 4.5, `${foreground} on ${background}`)
+    }
+  }
 })
 function copyHarness(writeText) {
   let handler

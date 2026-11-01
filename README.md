@@ -27,7 +27,7 @@ python -m http.server 5400 --directory public
 
 ## 部署
 
-站点挂在 Cloudflare Pages 项目 **`baselio`**，生产域名 https://baselio.pages.dev 。
+已在 2026-11-01 通过 Cloudflare 核实，本次发布目标为 Pages 项目 **`baselio-prototype`**，生产域名 https://baselio-prototype.pages.dev 。生产分支为 `main`，无 Git 直连。账号内另有独立的 `baselio` 项目，不要混用。
 
 - **自动**：推 `main` 触发 `.github/workflows/deploy.yml`。需要在仓库 Secrets 里配两个值：
   - `CLOUDFLARE_API_TOKEN`：Cloudflare → My Profile → API Tokens，权限 `Account → Cloudflare Pages → Edit`
@@ -35,10 +35,10 @@ python -m http.server 5400 --directory public
 - **手动**（没有 secrets 时）：
 
 ```bash
-npx wrangler pages deploy public --project-name baselio --branch main
+npx wrangler pages deploy public --project-name baselio-prototype --branch main
 ```
 
-生产分支是 `main`：`--branch main` 才会更新 `baselio.pages.dev`，其它分支只会生成预览别名。
+`--branch main` 才会更新 `baselio-prototype.pages.dev`，其它分支生成预览。自动发布前先运行测试；缺少凭据时部署 job 明确跳过，不将检查成功视为发布成功。最终必须验证 Cloudflare 的生产部署与公开页面。
 
 ## 注意
 
@@ -47,7 +47,7 @@ npx wrangler pages deploy public --project-name baselio --branch main
 
 ## 改版开发与验证
 
-在独立分支开发，提交 PR 供审核；不要推送 `main` 或手动触发生产部署。
+在独立分支开发并提交 PR；获得明确发布授权且通过检查后才可合并到 `main` 或部署生产。
 部署任务只允许在 `main` 执行，包括手动触发时。PR 检查不会部署站点。
 
 ```bash
@@ -65,4 +65,4 @@ JavaScript 不可用时不显示表单，但保留直接联系邮箱，防止原
 原始图片未经过生成式修改，来源、范围及校验值保存在 `public/media/provenance.json`。
 截图展示不代表完整科研流程验证。真实录屏、完整执行记录、申请后端、邀请状态、正式隐私条款和日语医学审校仍需补齐，详见 `docs/redesign-verification.md`。
 
-历史目标 `baselio-prototype.pages.dev` 与此仓库配置的 `baselio.pages.dev` 不同；本次未修改域名、Pages 项目或部署配置中的项目名，也未发布任一站点。
+公开联系邮箱为 `chenglei1479@gmail.com`。发布前审查范围与限制见 `docs/release-review.md`。

@@ -286,10 +286,10 @@ const additions = {
     "beta.notice": "隐私提示：不填写患者资料、研究原始数据或其他保密信息。填写内容不会由本站自动保存；发送邮件后按邮件服务及收件方流程处理。申请状态与后续条款请通过邮件确认。",
     "beta.consent": "我理解此操作只生成草稿，并确认未填写敏感信息。",
     "beta.prepare": "生成邮件草稿",
-    "beta.ready": "草稿已生成，尚未发送。可打开邮件应用发送；无法打开时请复制下方内容，发至 hello@baselio.dev。",
+    "beta.ready": "草稿已生成，尚未发送。可打开邮件应用发送；无法打开时请复制下方内容，发至 chenglei1479@gmail.com。",
     "beta.open": "打开邮件应用",
     "beta.draft": "邮件草稿内容",
-    "beta.fallback": "也可直接邮件联系 hello@baselio.dev",
+    "beta.fallback": "也可直接邮件联系 chenglei1479@gmail.com",
     "beta.back": "返回首页",
     "beta.changed": "申请内容已更改，请重新生成草稿。",
     "beta.subject": "Baselio Beta 申请 / 合作咨询",
@@ -304,7 +304,7 @@ const additions = {
     "privacy.pageTitle": "数据与隐私：先了解，再使用",
     "privacy.intro": "这里区分官网申请流程与科研产品的数据边界。具体配置和机构要求，仍需在使用前逐项核实。",
     "privacy.0.title": "官网如何使用你的填写内容",
-    "privacy.0.body": "申请页在浏览器内生成草稿，没有申请数据库或自动提交。只有你在邮件应用中发送后，内容才会作为邮件发给 hello@baselio.dev。可联系该邮箱咨询已发送申请的处理或删除；本页不承诺删除期限。",
+    "privacy.0.body": "申请页在浏览器内生成草稿，没有申请数据库或自动提交。只有你在邮件应用中发送后，内容才会作为邮件发给 chenglei1479@gmail.com。可联系该邮箱咨询已发送申请的处理或删除；本页不承诺删除期限。",
     "privacy.1.title": "语言偏好与网站托管",
     "privacy.1.body": "官网仅在本机存储所选语言；未接入分析或广告脚本。页面由 Cloudflare Pages 托管，访问仍会产生网络请求，托管服务可能处理 IP 等连接信息。不要将静态网站等同于完全匿名访问。",
     "privacy.2.title": "科研内容可能流向哪里",
@@ -332,7 +332,12 @@ const additions = {
     "demo.captureNote": "全部为真实产品窗口原图，保留完整窗口比例，未做生成式修改。点击图片可查看原图；版本和配置可能不同。官网不执行科研任务。",
     "demo.version": "采集版本：0.1.33-beta.20 · 2026-11-01 · 英文界面为主",
     "demo.overviewCaption": "完整产品工作台 · 英文界面 · 空演示项目，尚未执行任务",
-    "demo.overviewAlt": "Baselio 完整英文工作台，展示左侧项目导航、上方科研状态、研究任务入口与中央输入区"
+    "demo.overviewAlt": "Baselio 完整英文工作台，展示左侧项目导航、上方科研状态、研究任务入口与中央输入区",
+    "contact": "联系团队",
+    "cap.lede": "让资料、方法与产出在同一项目中衔接。体验范围以获邀版本、运行环境与实际输出为准。",
+    "trust.3.body": "产品提供发送前检查与限制，但不能保证识别全部患者信息。桌面运行不等于全程离线；使用前仍需确认外部连接配置，并遵守机构的数据处理要求。",
+    "faq.3.a": "不能仅凭桌面应用作此保证。产品有发送前检查与限制，但不能保证识别全部敏感信息；外部连接与数据外发仍需按机构要求审核。",
+    "cap.3.body": "在已配置的本机 Python / R 环境分析并保留实际输出。发送前检查并非绝对保证；无法执行时，草稿不能被当作分析结果。"
   },
   "en": {
     "hero.line1": "From a clinical question,",
@@ -382,10 +387,10 @@ const additions = {
     "beta.notice": "Privacy: do not include patient information, raw research data or confidential material. This site does not automatically save your entries. Sent email is handled by your email provider and the recipient. Confirm application status and terms by email.",
     "beta.consent": "I understand this prepares a draft only and confirm I have included no sensitive information.",
     "beta.prepare": "Prepare email draft",
-    "beta.ready": "Draft prepared, not sent. Open your email app to send it, or copy the text below and email hello@baselio.dev.",
+    "beta.ready": "Draft prepared, not sent. Open your email app to send it, or copy the text below and email chenglei1479@gmail.com.",
     "beta.open": "Open email app",
     "beta.draft": "Email draft",
-    "beta.fallback": "You can also email hello@baselio.dev directly",
+    "beta.fallback": "You can also email chenglei1479@gmail.com directly",
     "beta.back": "Back to home",
     "beta.changed": "Your entries changed. Prepare a new draft.",
     "beta.subject": "Baselio beta request / enquiry",
@@ -400,7 +405,7 @@ const additions = {
     "privacy.pageTitle": "Data and privacy: understand before use",
     "privacy.intro": "The website enquiry and the research product have different data boundaries. Review the actual configuration and institutional requirements before use.",
     "privacy.0.title": "What happens to website entries",
-    "privacy.0.body": "The enquiry page prepares a draft in your browser without an application database or automatic submission. Only after you send it in your email app is it emailed to hello@baselio.dev. Contact that address about handling or deleting a sent request; no deletion timeframe is promised here.",
+    "privacy.0.body": "The enquiry page prepares a draft in your browser without an application database or automatic submission. Only after you send it in your email app is it emailed to chenglei1479@gmail.com. Contact that address about handling or deleting a sent request; no deletion timeframe is promised here.",
     "privacy.1.title": "Language preference and hosting",
     "privacy.1.body": "The site stores the selected language locally and includes no analytics or advertising scripts. It is hosted on Cloudflare Pages; visits still make network requests, and the hosting service may process connection information such as IP addresses. A static website does not mean fully anonymous access.",
     "privacy.2.title": "Where research content may go",
@@ -428,7 +433,12 @@ const additions = {
     "demo.captureNote": "All images are actual product window captures, preserving the full window proportions without generative alterations. Open an image to inspect the original. Versions and configurations may differ. This website does not execute research tasks.",
     "demo.version": "Captured version: 0.1.33-beta.20 · 2026-11-01 · English-first interface",
     "demo.overviewCaption": "Complete product workbench · English interface · Empty demo project, no task executed",
-    "demo.overviewAlt": "Full Baselio English workbench showing project navigation, scientific status, research task starters and the main input area"
+    "demo.overviewAlt": "Full Baselio English workbench showing project navigation, scientific status, research task starters and the main input area",
+    "contact": "Contact the team",
+    "cap.lede": "Connect material, methods and outputs in one project. Availability depends on your invited version, runtime environment and actual outputs.",
+    "trust.3.body": "The product provides pre-send checks and restrictions, but cannot guarantee detection of all patient information. Desktop operation does not mean fully offline. Review external connection settings and your institution’s data handling requirements before use.",
+    "faq.3.a": "A desktop app alone cannot guarantee that. Pre-send checks and restrictions cannot guarantee detection of all sensitive information. Review external connections and outbound data against institutional requirements.",
+    "cap.3.body": "Analyse in a configured local Python / R environment and retain actual output. Pre-send checks are not an absolute guarantee. If execution is unavailable, a draft must not be treated as an analysis result."
   },
   "ja": {
     "hero.line1": "臨床の問いから、",
@@ -478,10 +488,10 @@ const additions = {
     "beta.notice": "患者情報、研究の生データ、機密情報は入力しないでください。本サイトは入力内容を自動保存しません。メール送信後はメールサービスと受信者の手順で取り扱われます。受付状況・条件はメールで確認してください。",
     "beta.consent": "下書きの作成のみであることを理解し、機微情報を含めていないことを確認しました。",
     "beta.prepare": "メール下書きを作成",
-    "beta.ready": "下書きを作成しました。まだ送信していません。メールアプリで送信するか、下の内容をコピーして hello@baselio.dev へお送りください。",
+    "beta.ready": "下書きを作成しました。まだ送信していません。メールアプリで送信するか、下の内容をコピーして chenglei1479@gmail.com へお送りください。",
     "beta.open": "メールアプリを開く",
     "beta.draft": "メール下書き",
-    "beta.fallback": "hello@baselio.dev への直接のお問い合わせも可能です",
+    "beta.fallback": "chenglei1479@gmail.com への直接のお問い合わせも可能です",
     "beta.back": "ホームへ戻る",
     "beta.changed": "入力内容が変わりました。下書きを作り直してください。",
     "beta.subject": "Baselio ベータ申し込み・相談",
@@ -496,7 +506,7 @@ const additions = {
     "privacy.pageTitle": "データとプライバシー：確認してから利用する",
     "privacy.intro": "Web サイトでのお申し込みと研究用製品では、データの取扱いが異なります。利用前に実際の設定と所属機関の規則をご確認ください。",
     "privacy.0.title": "フォームの入力内容について",
-    "privacy.0.body": "申し込みページはブラウザ内で下書きを作成し、申込データベースへの保存・自動送信は行いません。メールアプリで送信した内容が hello@baselio.dev に届きます。送信済み内容の取扱い・削除は同アドレスにご相談ください。削除期限は本ページではお約束していません。",
+    "privacy.0.body": "申し込みページはブラウザ内で下書きを作成し、申込データベースへの保存・自動送信は行いません。メールアプリで送信した内容が chenglei1479@gmail.com に届きます。送信済み内容の取扱い・削除は同アドレスにご相談ください。削除期限は本ページではお約束していません。",
     "privacy.1.title": "言語設定とホスティング",
     "privacy.1.body": "本サイトは選択した言語を端末に保存し、アクセス解析・広告スクリプトは組み込んでいません。Cloudflare Pages で配信され、アクセス時に通信が発生します。ホスティングサービスが IP アドレス等の接続情報を扱う可能性があり、完全な匿名アクセスを意味しません。",
     "privacy.2.title": "研究内容の送信先について",
@@ -524,7 +534,12 @@ const additions = {
     "demo.captureNote": "全て実際の製品ウィンドウを撮影し、全体の縦横比を保持しています。生成 AI による加工はしていません。画像を開くと原図を確認できます。バージョン・設定により異なる場合があります。このサイトでは研究タスクを実行しません。",
     "demo.version": "撮影バージョン：0.1.33-beta.20 · 2026-11-01 · 主に英語の画面",
     "demo.overviewCaption": "製品ワークスペース全体 · 英語画面 · 空のデモプロジェクト、タスク未実行",
-    "demo.overviewAlt": "Baselio の英語ワークスペース全体。プロジェクトナビゲーション、研究ステータス、タスク入口、入力欄を表示"
+    "demo.overviewAlt": "Baselio の英語ワークスペース全体。プロジェクトナビゲーション、研究ステータス、タスク入口、入力欄を表示",
+    "contact": "お問い合わせ",
+    "cap.lede": "資料・手法・成果を同じプロジェクトでつなぎます。利用範囲は提供バージョン、実行環境、実際の出力により異なります。",
+    "trust.3.body": "送信前の確認と制限を備えていますが、全ての患者情報の検出を保証するものではありません。デスクトップでの動作は完全オフラインを意味しません。外部接続の設定と所属機関のデータ取扱規則を利用前に確認してください。",
+    "faq.3.a": "デスクトップアプリだけでは保証できません。送信前の確認と制限で全ての機微情報を検出できるとは限りません。外部接続・データ送信は所属機関の規則に従って確認してください。",
+    "cap.3.body": "設定済みのローカル Python / R 環境で解析し、実際の出力を保存します。送信前の確認は絶対的な保証ではありません。実行できない場合、草稿を解析結果として扱わないでください。"
   }
 }
 for (const language of Object.keys(additions)) Object.assign(dictionaries[language], additions[language])
@@ -558,7 +573,12 @@ const renderErrors = (errors, focus = false) => {
 }
 const clearDraft = () => {
   const panel = document.getElementById('draft-panel')
-  if (!panel || panel.hidden) return
+  if (!panel) return
+  if (panel.hidden) {
+    const status = document.getElementById('draft-status')
+    if (status.textContent.trim()) status.textContent = dictionaries[currentLanguage]['beta.changed']
+    return
+  }
   panel.hidden = true
   document.getElementById('draft').value = ''
   document.getElementById('open-mail').removeAttribute('href')
@@ -629,7 +649,7 @@ if (form) {
       d['beta.task'] + ': ' + form.elements.task.selectedOptions[0].textContent,
       'Language: ' + currentLanguage, 'Source: baselio-site / beta'].join('\n')
     document.getElementById('draft').value = body
-    document.getElementById('open-mail').href = 'mailto:hello@baselio.dev?subject=' + encodeURIComponent(d['beta.subject']) + '&body=' + encodeURIComponent(body)
+    document.getElementById('open-mail').href = 'mailto:chenglei1479@gmail.com?subject=' + encodeURIComponent(d['beta.subject']) + '&body=' + encodeURIComponent(body)
     document.getElementById('draft-panel').hidden = false
     document.getElementById('draft-panel').focus()
     document.getElementById('draft-status').textContent = d['beta.ready']
